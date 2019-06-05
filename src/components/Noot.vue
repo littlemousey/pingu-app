@@ -5,13 +5,12 @@
       <img alt="Pingu" src="@/assets/img/pingu.png" />
     </div>
     <div>
-      <el-badge :value="nootAmount" class="item">
-        <el-button type="primary" icon="el-icon-video-play" @click="countNoot"
-          >Send noots</el-button
-        >
-      </el-badge>
+      <el-button type="primary" icon="el-icon-video-play" @click="countNoot"
+        >Send noots</el-button
+      >
     </div>
     <div v-if="nootPercentage > 0">
+      <p>Your progress in becoming a Noot master</p>
       <el-progress
         :text-inside="true"
         :stroke-width="24"
@@ -25,18 +24,20 @@
 <script>
 export default {
   name: "noot",
+  props: {
+    nootAmount: { required: true, type: Number }
+  },
   data: function() {
     return {
-      nootAmount: null,
       nootPercentage: null
     };
   },
   methods: {
     countNoot() {
-      this.nootAmount++;
+      this.$emit("addNoot");
       const sound = new Audio(require("../assets/sounds/NootNoot.mp3"));
       sound.play();
-      this.nootPercentage = (this.nootAmount / 1000) * 100;
+      this.nootPercentage = Math.floor((this.nootAmount / 1000) * 100);
     }
   }
 };

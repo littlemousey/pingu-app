@@ -1,14 +1,24 @@
 <template>
   <div class="home">
-    <noot></noot>
+    <noot :nootAmount="nootAmount" @addNoot="incrementNoots"></noot>
   </div>
 </template>
 
 <script>
 import Noot from "@/components/Noot";
+import { mapActions } from "vuex";
+
 export default {
   name: "home",
-  components: { Noot }
+  components: { Noot },
+  computed: {
+    nootAmount() {
+      return this.$store.state.nootAmount;
+    }
+  },
+  methods: {
+    ...mapActions(["incrementNoots"])
+  }
 };
 </script>
 

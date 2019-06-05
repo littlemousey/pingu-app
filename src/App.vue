@@ -17,7 +17,7 @@ body {
   text-align: center;
   background-color: black;
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   overflow: hidden;
 }
 
