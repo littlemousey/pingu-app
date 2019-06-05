@@ -2,7 +2,7 @@
   <div class="noot-component">
     <div>Pingu has been waiting for you...</div>
     <div>
-      <img alt="Pingu" src="@/assets/img/pingu.png" />
+      <img alt="Pingu" src="@/assets/img/pingu.png" class="pingu-img" />
     </div>
     <div>
       <el-button type="primary" icon="el-icon-video-play" @click="countNoot"
@@ -27,20 +27,29 @@ export default {
   props: {
     nootAmount: { required: true, type: Number }
   },
-  data: function() {
-    return {
-      nootPercentage: null
-    };
+  computed: {
+    nootPercentage() {
+      return Math.floor((this.nootAmount / 1000) * 100);
+    }
   },
   methods: {
     countNoot() {
       this.$emit("addNoot");
       const sound = new Audio(require("../assets/sounds/NootNoot.mp3"));
       sound.play();
-      this.nootPercentage = Math.floor((this.nootAmount / 1000) * 100);
     }
   }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media only screen and (max-width: 400px) {
+  .pingu-img {
+    width: 90%;
+    height: 90%;
+  }
+  .noot-component {
+    font-size: 0.8em;
+  }
+}
+</style>

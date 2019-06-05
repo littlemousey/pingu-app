@@ -1,6 +1,6 @@
 <template>
   <div class="about" v-if="dataAvailable">
-    <img :src="pinguImage" alt="pingo logo" />
+    <img :src="pinguImage" alt="pingo logo" class="pingu-logo" />
     <h1>{{ pinguData.title }}</h1>
     <span>{{ pinguData.extract }}</span>
   </div>
@@ -61,5 +61,14 @@ export default {
 <style lang="scss" scoped>
 .about {
   max-width: 80vh;
+}
+@media only screen and (max-width: 400px) {
+  .pingu-logo {
+    width: 40%;
+    height: 40%;
+  }
+  .about {
+    font-size: 0.8em;
+  }
 }
 </style>
