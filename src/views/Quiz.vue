@@ -2,7 +2,8 @@
   <div>
     <h2>Pingu quiz</h2>
     <el-form>
-      <el-form-item :label="quiz[0].question">
+      <el-form-item>
+        <div>{{ quiz[0].question }}</div>
         <el-radio-group v-model="answerQ1">
           <el-radio
             v-for="answer in quiz[0].answers"
@@ -11,7 +12,8 @@
           ></el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item :label="quiz[1].question">
+      <el-form-item>
+        <div>{{ quiz[1].question }}</div>
         <el-radio-group v-model="answerQ2">
           <el-radio
             v-for="answer in quiz[1].answers"
@@ -20,7 +22,8 @@
           ></el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item :label="quiz[2].question">
+      <el-form-item>
+        <div>{{ quiz[2].question }}</div>
         <el-radio-group v-model="answerQ3">
           <el-radio
             v-for="answer in quiz[2].answers"
@@ -29,7 +32,8 @@
           ></el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item :label="quiz[3].question">
+      <el-form-item>
+        <div>{{ quiz[3].question }}</div>
         <el-radio-group v-model="answerQ4">
           <el-radio
             v-for="answer in quiz[3].answers"
@@ -38,7 +42,8 @@
           ></el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item :label="quiz[4].question">
+      <el-form-item>
+        <div>{{ quiz[4].question }}</div>
         <el-radio-group v-model="answerQ5">
           <el-radio
             v-for="answer in quiz[4].answers"

@@ -32,4 +32,7 @@ li {
     content: "🐧";
   }
 }
+ul {
+  padding: 0;
+}
 </style>

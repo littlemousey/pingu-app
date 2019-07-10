@@ -24,6 +24,12 @@ body {
   overflow: hidden;
 }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 a {
   color: white;
 }
@@ -34,6 +40,8 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  max-height: 80vh;
+  padding: 25vh 15px 5px;
+  overflow-y: scroll;
 }
 </style>
