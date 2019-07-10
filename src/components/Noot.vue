@@ -2,7 +2,7 @@
   <div class="noot-component">
     <div>Pingu has been waiting for you...</div>
     <div>
-      <img alt="Pingu" src="@/assets/img/pingu.png" class="pingu-img" />
+      <img alt="Pingu" src="@/assets/img/pingu_waiting.png" class="pingu-img" />
     </div>
     <div>
       <el-button type="primary" icon="el-icon-video-play" @click="countNoot"
@@ -43,10 +43,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .pingu-img {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
   }
   .noot-component {
     font-size: 0.8em;

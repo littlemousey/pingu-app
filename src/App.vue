@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Noot</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/trivia">Trivia</router-link> |
+      <router-link to="/quiz">Quiz</router-link> |
+      <router-link to="/achievements">Achievements</router-link>
     </div>
     <div class="router-content">
       <router-view />
