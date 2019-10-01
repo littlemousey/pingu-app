@@ -10,8 +10,9 @@
     <div class="description">
       <h3>{{ title }}</h3>
       <span class="subtitle">
-        {{ `${number && number + " noots - "}` }}{{ text }}</span
-      >
+        <em class="num-noots" v-if="number"> {{ number }} noots -</em>
+        {{ text }}
+      </span>
     </div>
   </div>
 </template>
@@ -58,6 +59,10 @@ export default {
     justify-content: center;
     display: flex;
     flex-direction: column;
+  }
+
+  .num-noots {
+    font-style: normal;
   }
 }
 
